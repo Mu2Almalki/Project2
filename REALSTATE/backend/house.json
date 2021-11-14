@@ -1,0 +1,80 @@
+[
+    {
+        "id":"1",
+        "imge":"https://images.bayut.sa/thumbnails/1441124-800x600.webp",
+        "title":"Duplex Villa",
+        "Location":"Riyadh-Al Munsiyah",
+        "Price":"1.900.050",
+        "Details":"3 master bedrooms and 2 bedrooms, in addition to a maid's room, banquet, an external driver's residence",
+        "imgDetails":[
+            "https://images.bayut.sa/thumbnails/1441158-800x600.webp",
+            "https://images.bayut.sa/thumbnails/1441117-800x600.webp",
+            "https://images.bayut.sa/thumbnails/1441145-800x600.webp"
+        ]
+    },
+    {
+        "id":"2",
+        "imge":"https://images.bayut.sa/thumbnails/1486571-800x600.webp",
+        "title":"Villa",
+        "Location":"Riyadh- Al Malqa",
+        "Price":"4.500.000",
+        "Details":"3 villas for sale , Area: 375 square meters corner,Two streets 25 m north and 15 m west",
+        "imgDetails":[{
+            "img1":"",
+            "img2":"",
+            "img3":""
+            
+        }]
+    },
+    {
+        "id":"3",
+        "imge":"https://images.bayut.sa/thumbnails/1478153-800x600.webp",
+        "title":"Villa",
+        "Location":"Riyadh-Al-Arid",
+        "Price":"1.500.000",
+        "Details":"Ground floor: a large men's Majlis with a dining hall - a hall - 3 toilets - a car entrance - an external extension for men - an external extension for women .. first floor:3 bedrooms - hall - 3 bathrooms .. second floor:Maid's room with WC, wash area - large private deck",
+        "imgDetails":[{
+            "img1":"",
+            "img2":"",
+            "img3":""
+        }]
+    },
+    {
+        "id":"4",
+        "imge":"",
+        "title":"",
+        "Location":"",
+        "Price":"",
+        "Details":"",
+        "imgDetails":[{
+            "img1":"",
+            "img2":"",
+            "img3":""
+        }]
+    },
+    {
+        "id":"5",
+        "imge":"",
+        "title":"",
+        "Location":"",
+        "Price":"",
+        "Details":"",
+        "imgDetails":[{
+            "img1":"",
+            "img2":"",
+            "img3":""}]
+    },
+    {
+        "id":"6",
+        "imge":"",
+        "title":"",
+        "Location":"",
+        "Price":"",
+        "Details":"",
+        "imgDetails":[{
+            "img1":"",
+            "img2":"",
+            "img3":""
+        }]
+    }
+]
