@@ -1,6 +1,6 @@
 import {Carousel, Card ,Col , Button} from 'react-bootstrap'
 import axios from "axios"
-import {useState, useEffect } from "react"
+import {useState } from "react"
 import {BrowserRouter as Router ,Switch , Route ,Link,useParams } from "react-router-dom"
 import Navigation from './Navigation'
 
@@ -10,14 +10,7 @@ function Moredetails({data}){
     const [House1 , setHouse1]=useState([]);
 console.log(id)
 console.log(data)
-    // useEffect (() =>{
-    //     axios.get(`http://localhost:3001/house/details/${id}`)
-    //     .then((res)=>{
-    //         console.log(res.data);
-    //         setHouse1(res.data);
-    //     })
-    //     },[]);
-
+   
         
     return(
         <div className="maindiv">
@@ -37,6 +30,8 @@ console.log(data)
                 <p>{item.Details}</p>
                 <br/>
                 <h2>{item.Price}</h2>
+                <button onClick="">Conact Us</button>
+                <button onClick="">Email</button>
               </div>
             </div>
           </div>

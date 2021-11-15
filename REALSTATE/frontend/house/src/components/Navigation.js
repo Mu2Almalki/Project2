@@ -1,5 +1,5 @@
 
-import {Navbar ,Container,Nav,Form ,FormControl,Button} from 'react-bootstrap'
+import {Navbar ,Container,Nav,Form ,FormControl,Button,Carousel,Card,Col,} from 'react-bootstrap'
 import {BrowserRouter as Router , Route, Routes,Link} from "react-router-dom";
 import Home from '../components/Home';
 import Details from "../components/Moredetails"
@@ -7,10 +7,19 @@ import imge from './images/logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios"
 import {useState, useEffect } from "react"
+import Serves from './Serves';
+import About from './About';
+import Login from "./Login"
+
+
+
+let value = 0 
+
+
 
 // import "stylesheet"
 function Navigation (){
-  const [House , setHouse]=useState([]);
+  const [house , setHouse]=useState([]);
 
   useEffect (() =>{
     axios.get('http://localhost:3001/house/home')
@@ -36,8 +45,9 @@ function Navigation (){
         navbarScroll
       >
         <Nav.Link href="#action1"><Link exact to="/">Home</Link></Nav.Link>
-        <Nav.Link href="#action1">Serves</Nav.Link>
-        <Nav.Link href="#action1">About</Nav.Link>
+        <Nav.Link href="#action1"><Link to="/Serves">Serves</Link></Nav.Link>
+        <Nav.Link href="#action1"><Link to="/About">About</Link></Nav.Link>
+        <Nav.Link href="#action1"><Link to="/Login">Login</Link></Nav.Link>
         
       </Nav>
       <Form className="d-flex">
@@ -48,10 +58,13 @@ function Navigation (){
           aria-label="Search"
         />
         <Button variant="outline-success">Search</Button>
-      </Form>
+     </Form>
+  
+      
     </Navbar.Collapse>
   </Container>
 </Navbar>
+
 
 
 
@@ -59,10 +72,14 @@ function Navigation (){
       <Route exact path="/" element={<Home/>}/>
       {/* <Route path="/Search"><Search/></Route> */}
       {/* <Route path="./Moredetails" element={<Details/>} data={item}/> */}
-      <Route path="/Details/:id" element={<Details data={House}/>} />
+      <Route path="/Details/:id" element={<Details data={house}/>} />
+      <Route path="/Login" element={<Login/>} />
+      <Route  path="/About" element={<About/>}/>
+      <Route  path="/Serves" element={<Serves/>}/>
 
     </Routes> 
     </Router>
+    
 </div>
     )
 }
