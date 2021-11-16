@@ -19,8 +19,53 @@ console.log(data)
         .map((item) => (
           <div>
             <br></br>
-            <h1>{item.id}</h1>
             <h3>{item.title}</h3>
+{/* _________________________________________________ */}
+{item.imgDetails.map((e)=>{
+  // console.log(e.img1)
+  // console.log(e.img2)
+  // console.log(e.img3)
+  return(
+
+<Carousel fade>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={e.img1}
+      alt="First slide"
+    />
+    <Carousel.Caption>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={e.img2}
+      alt="Second slide"
+    />
+
+    <Carousel.Caption>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={e.img3}
+      alt="Third slide"
+    />
+
+    <Carousel.Caption>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
+
+
+  )
+
+})}
+{/* __________________________________________________ */}
+
+
             <div className="DetailsCard" key={item.id}>
               <div className="DetailsImg">
                 {/* <img alt="" src={item.snippet.thumbnails.default.url}></img> */}
@@ -30,7 +75,8 @@ console.log(data)
                 <p>{item.Details}</p>
                 <br/>
                 <h2>{item.Price}</h2>
-                <button onClick="">Conact Us</button>
+                <button onClick="" > Conact Us</button> 
+
                 <button onClick="">Email</button>
               </div>
             </div>

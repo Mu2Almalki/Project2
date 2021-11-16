@@ -5,10 +5,17 @@ import {BrowserRouter as Router ,Switch , Route ,Link } from "react-router-dom"
 import Moredetails from './Moredetails'
 import Serves from './Serves'
 import About from './About'
+import '../App.css';
+
 
 function Home (){
     
-    const [House , setHouse]=useState([]);
+    const [house, setHouse] = useState([]);
+
+    //input word
+    const [HouseSearch, setHouseSearch] = useState();
+  
+    const [filteredHouse, setFilteredHouse] = useState([])
     
 
 
@@ -21,39 +28,45 @@ function Home (){
       },[]);
 
       
+  //  function SearchResult() {
+  //   const result = house.filter(h => 
+  //     h.title.toLowerCase().includes(HouseSearch)
+  //   )
+  //   console.log(result)
+  //   setFilteredHouse(result)
+  // }
 
     return(
         <div className="home">
- <div class="m-4">
-    <form method="post">
-        <div class="row align-items-center g-3">
-            <div class="col-auto">
-                <label class="visually-hidden" for="inputEmail">Email</label>
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email" required/>
-            </div>
-            <div class="col-auto">
-                <label class="visually-hidden" for="inputPassword">Password</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password" required/>
-            </div>
-            <div class="col-auto">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="checkRemember"/>
-                    <label class="form-check-label" for="checkRemember">Remember me</label>
-                </div>
-            </div>
-            <div class="col-auto">
-                <button type="submit" class="btn btn-primary">Sign in</button>
-            </div>
-        </div>
-    </form>
-</div>
-<div>
+
+                {/* <input
+                  type="search"
+                  placeholder="Search"
+                  className="me-2"
+                  aria-label="Search"
+                  onChange={(e) => {
+                    setHouseSearch(e.target.value);
+                  }}
+                />
+                <button
+                  variant="outline-dark"
+                  onClick={() => {
+                    SearchResult();
+                  }}
+                >
+                  Search
+                </button>
+     */}
+<div className="divcard">
+
+     
       <Row xs={1} md={2} className="g-4">
-  {House.map((item, idx) => (
-    <Col>
-      <Card>
+      {/* filteredHouse */}
+  {house.map((item, idx) => (
+    <Col key={idx}>
+      <Card className="card44">
         <Card.Img className="sizImge" variant="top" src={item.imge} />
-        <Card.Body>
+        <Card.Body className="cardStyle">
           <Card.Title> {item.title}</Card.Title>
           <Card.Text>{item.Location}</Card.Text>
           <Card.Text>{item.Price}</Card.Text>

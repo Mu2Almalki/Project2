@@ -1,6 +1,9 @@
 .App {
   text-align: center;
-  background-color: #cdcec7
+  background-color: #b9bbc7;
+
+  
+  
   
 }
 
@@ -57,4 +60,45 @@
 .sizImge{
   height: 300px;
   width: 150px;
+  border-radius : 20px;
+  border: solid ;
+  border-width: 5px;
+  
+}
+.container-fluid{
+  background-color: white;
+
+}
+.cardStyle {
+  /* border-radius: 30px; */
+font-weight: bold;  
+font-size: initial;
+font-style: oblique;
+
+
+}
+/* .card44{
+   border: black solid;
+  border-radius: 100px;  
+
+} */
+
+.H1style{
+  font-weight: bold;
+  text-align: left;
+
+}
+.about{
+  margin-bottom: 0;
+
+}
+.Pabout{
+  margin-bottom: 50px;
+  font-size: 15px;
+  text-align: left;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+padding: 0;
+}
+body{
+  margin-bottom: 0px;
 }
