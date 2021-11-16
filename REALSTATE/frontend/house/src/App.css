@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  background-color: #cdcec7
+  background-color: #cdcec7;
+  
   
 }
 
@@ -57,4 +58,5 @@
 .sizImge{
   height: 300px;
   width: 150px;
+  margin: auto;
 }
