@@ -1,15 +1,15 @@
-.App {
-  text-align: center;
-  background-color: #b9bbc7;
 
-  
-  
+
+.App {
+background-color: rgb(182, 179, 179);
+   
   
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+ 
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -49,6 +49,8 @@
 .home{
   margin: 50px;
   margin-bottom: 0px;
+ 
+
 }
 .nb{
   /* background-color: #728fce; */
@@ -57,12 +59,26 @@
 
 
 }
-.sizImge{
+
+.TestCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5% !important;
+  border: solid gray !important;
+  
+
+}
+
+#sizImge{
   height: 300px;
-  width: 150px;
-  border-radius : 20px;
-  border: solid ;
-  border-width: 5px;
+  width: 600px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 20px;
+  border-radius: 50px !important;
+
   
 }
 .container-fluid{
@@ -74,14 +90,15 @@
 font-weight: bold;  
 font-size: initial;
 font-style: oblique;
+text-align: center;
 
 
 }
-/* .card44{
+.card44{
    border: black solid;
   border-radius: 100px;  
 
-} */
+}
 
 .H1style{
   font-weight: bold;
@@ -101,4 +118,53 @@ padding: 0;
 }
 body{
   margin-bottom: 0px;
+}
+.Search{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+}
+
+.DetailsP{
+  font-size: larger;
+  font-weight: bold;
+}
+
+.DetailsCard{
+  text-align: center;
+  font-style: initial;
+}
+
+.iconBtn{
+display:flex;
+flex-direction: column ;
+align-items: center;
+
+/* align-content: space-between;   */
+}
+.maindiv{
+margin-left: 20%;
+margin-right: 20%;
+text-align: center;
+padding: 20px;
+padding-top: 10%;
+
+ 
+
+
+}
+
+.Fotr{display: flex;
+  justify-content: center;
+  margin-top: 3%;
+  padding-bottom: 3%;
+  padding-top: 3%;
+  padding-left: 10%;
+ font-size: 50px;
+  justify-content: space-evenly ;
+  background-color: white;
+
+
+
+
 }

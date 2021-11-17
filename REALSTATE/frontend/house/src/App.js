@@ -1,7 +1,9 @@
 import './App.css';
 import React from 'react';
-import Navigation from './components/Navigation';
+import Naviga from './components/Naviga';
 import { useState } from 'react';
+import Footer from './components/Footer';
+
 
 // //
 
@@ -13,9 +15,9 @@ function App() {
 
   return (
     <div className="App">
-    <Navigation></Navigation>
+     <Naviga></Naviga>
+    <Footer></Footer>
     
-  
     </div>
   );
 }

@@ -1,46 +1,40 @@
-import {Row , Card ,Col , Button} from 'react-bootstrap'
-import axios from 'axios';
+// import axios from 'axios';
+import {Row , Card ,Col , Button , Link} from 'react-bootstrap'
+import { useParams } from "react-router-dom";
+import {useState} from "react"
+import '../App.css'
 
 
-function Search (){
-    const [House, setHouse] = useState([]);
+function Search ({data}){
+const {word} = useParams()
+  const [filteredHouse, setFilteredHouse] = useState([])
 
-  const dispatch = useDispatch();
 
   
+{console.log(word)}
 
     return(
      
-<div>
-      {(function() {
-          if (Search==undefined) {
-            return (<h2> Sorry, there are no items available at the moment </h2>);
-          } else {
-            return (
-                <div>
-                  <Row xs={1} md={2} className="g-4">
-  {House.map((item, idx) => (
-    <Col>
-      <Card>
+<div className="Search">
+{data
+        .filter((item) => item.title.toLowerCase().includes(word.toLowerCase()))
+        .map((item) => (
+        <div>
+{/* <Col key={idx}> */}
+      <Card className="card44">
         <Card.Img className="sizImge" variant="top" src={item.imge} />
-        <Card.Body>
+        <Card.Body className="cardStyle">
           <Card.Title> {item.title}</Card.Title>
           <Card.Text>{item.Location}</Card.Text>
           <Card.Text>{item.Price}</Card.Text>
-   
-          <Link to={`/Details/${item.id}`} > <Button variant="secondary">More Details</Button></Link>
+          {/* <Link to={`/Details/${item.id}`} > <Button variant="secondary">More Details</Button></Link> */}
         </Card.Body>
       </Card>
-    </Col>
-  ))}
-</Row>  
-                </div>
-            )
-            
-          }
-        })()} 
+    {/* </Col> */}
+          </div>
         
-      </div>
+        ))}
+ </div>
        
     )
 }

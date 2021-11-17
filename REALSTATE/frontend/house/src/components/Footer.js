@@ -1,12 +1,21 @@
-// import { Component } from "react"
-// import { Facebook } from 'react-icons/bs';
-// import { Facebook } from "@react-icons/all-files/Bs/BsFacebook";
+import { BsInstagram } from "react-icons/bs";
+import { AiOutlineFacebook } from "react-icons/ai";
+import { SiTelegram } from "react-icons/si";
 
 
 
-//     class footer extends React.Component {
-//         render() {
-//           return <h3> Lets go for a <Facebook  />? </h3>
-//         }}
+function Footer (){
+    return(
+        <div className="Fotr">
+            <hr></hr>
+         <a href="https://www.instagram.com/"><BsInstagram/></a>
+        <a href="https://www.facebook.com/"><AiOutlineFacebook/></a>
+        <a href="https://web.telegram.org/k/" ><SiTelegram/></a>
+        <hr></hr>
+        </div>
+    )
+}
 
-// export default footer;
+
+
+export default Footer;

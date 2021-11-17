@@ -1,5 +1,5 @@
 import {
-  Navbar,
+Navbar,
   Modal,
   Container,
   Nav,
@@ -8,11 +8,11 @@ import {
   Button,
   Carousel,
   Card,
-  Col,
+  Col 
 } from "react-bootstrap";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Home from "../components/Home";
-import Details from "../components/Moredetails";
+import { BrowserRouter as Router, Route, Routes, Link , useNavigate} from "react-router-dom";
+import Home from "./Home";
+import Details from "./Moredetails";
 import imge from "./images/logo.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
@@ -20,15 +20,16 @@ import { useState, useEffect } from "react";
 import Serves from "./Serves";
 import About from "./About";
 import Login from "./Login";
+import Search from './Search'
 
 let value = 0;
 
-function Navigation() {
+function Naviga() {
+  let navtest = useNavigate()
   const [house, setHouse] = useState([]);
   //input word
   const [HouseSearch, setHouseSearch] = useState();
 
-  const [filteredHouse, setFilteredHouse] = useState([])
 
   const [show, setShow] = useState(false);
 
@@ -39,19 +40,21 @@ function Navigation() {
   const onPressed=(e)=>{ e.preventDefault()
      setIsPressed(true)}
 
-  // useEffect(() => {
-  //   axios.get("http://localhost:3001/house/home").then((res) => {
-  //     console.log(res);
-  //     setHouse(res.data);
-  //   });
-  // }, []);
+  useEffect(() => {
+    axios.get("http://localhost:3001/house/home").then((res) => {
+      console.log(res);
+      setHouse(res.data);
+    });
+  }, []);
 
   function SearchResult(e) {
     e.preventDefault();
-    const result = house.filter((h) => {
-      h.title.toLowerCase().includes(HouseSearch)
-    })
-    setFilteredHouse(result)
+    navtest(`/Search/${HouseSearch}`)
+  }
+    // const result = house.filter((h) => {
+    //   h.title.toLowerCase().includes(HouseSearch)
+    // })
+    // setFilteredHouse(result)
     // axios
     //   .get("http://localhost:3001/house/search/" + HouseSearch)
     //   .then((res) => {
@@ -61,11 +64,10 @@ function Navigation() {
     //   .catch((err) => {
     //     console.log(err);
     //   });
-  }
+  
 
   return (
     <div>
-      <Router>
         <Navbar bg="light" expand="lg">
           <Container fluid>
             <Navbar.Brand href="#">
@@ -153,14 +155,14 @@ function Navigation() {
                     setHouseSearch(e.target.value);
                   }}
                 />
-                <Button
+                <Link to ={`/Search/${HouseSearch}`}><Button
                   variant="outline-dark"
                   onClick={(e) => {
                     SearchResult(e);
                   }}
                 >
                   Search
-                </Button>
+                </Button></Link>
               </Form>
             </Navbar.Collapse>
           </Container>
@@ -168,17 +170,16 @@ function Navigation() {
 
         <Routes>
           <Route exact path="/" element={<Home />} />
-          {/* <Route path="/Search"><Search/></Route> */}
+          <Route path="/Search/:word"  element={<Search data={house} />} ></Route>
           {/* <Route path="./Moredetails" element={<Details/>} data={item}/> */}
           <Route path="/Details/:id" element={<Details data={house} />} />
           <Route path="/Login" element={<Login  />} />
           <Route path="/About" element={<About />} />
           <Route path="/Serves" element={<Serves />} />
         </Routes>
-      </Router>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>LogIn</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <form>
@@ -191,7 +192,7 @@ function Navigation() {
         <input type="password" />
      </label>
        <div>
-         <button onClick={onPressed} type="submit">Submit</button>
+         <button type="submit"></button>
        </div>
     </form> 
         </Modal.Body>
@@ -199,12 +200,12 @@ function Navigation() {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
+          <Button variant="primary"onClick={onPressed}> 
+            Submit
           </Button>
         </Modal.Footer>
       </Modal>
     </div>
   );
 }
-export default Navigation;
+export default Naviga;
