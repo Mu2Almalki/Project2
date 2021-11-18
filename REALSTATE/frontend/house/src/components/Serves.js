@@ -77,7 +77,7 @@ function Serves() {
         type="text"
         name="title"
       ></input>
-      <br />
+      <br /><br></br>
       <input
         placeholder="Location"
         onChange={(e) => setAddLocation(e.target.value)}
@@ -94,7 +94,8 @@ function Serves() {
         rows="3"
         cols="25"
       ></textarea>
-            <br />
+            <br />      <br></br>
+
 
       <input
         placeholder="Imge"
@@ -112,8 +113,10 @@ function Serves() {
         rows="4"
         cols="40"
       ></input>
-      <br />
-      <button onClick={handlPost}>Add </button>
+      <br></br>      <br></br>
+
+      <button type="button" class="btn btn-secondary" onClick={handlPost}>Add</button>
+
       </div>
    
     </div>
