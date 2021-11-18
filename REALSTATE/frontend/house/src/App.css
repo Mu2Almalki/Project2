@@ -2,8 +2,7 @@
 
 .App {
 background-color: rgb(182, 179, 179);
-   
-  
+
 }
 
 .App-logo {
@@ -173,8 +172,16 @@ padding-top: 10%;
 text-align: center;
 /* padding-left: 10%; */
 /* padding-right: 10%; */
-margin: 10%;
-border: solid ;
+margin: auto; 
 align-content: space-around;
-border-radius: 20%;
+width: fit-content;
 }
+
+input[type="text"]{
+  height: 50px;
+  width: 200px;
+}
+/* input[type="textarea"]{
+  height: 50px;
+  width: 300px;
+} */
