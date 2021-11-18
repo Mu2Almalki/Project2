@@ -6,6 +6,8 @@ Hello ..
 * It displays the available homes for sale in Riyadh, its location and price.
 * Displays the house details (the area of ​​the house, some pictures of the house, the number of rooms, etc...)
 * After logging in, the user can add a house for sale.
+* The user can search for the realestate he wants .
+* About us : Displays information about the website.
                ____________________________________________________________________________
 # Tools used:
 - ReactJS.
@@ -17,7 +19,8 @@ Hello ..
 - useState. 
 - useEffect. 
 - useParams.
-- useNavigate. 
+- useNavigate.
+- Tailwind CSS 
 - Responsive design. 
                ____________________________________________________________________________
  # Links:

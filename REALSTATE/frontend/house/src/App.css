@@ -44,6 +44,7 @@ background-color: rgb(182, 179, 179);
 
 .nav-button {
   color: #fff
+  
 }
 
 .home{
@@ -167,4 +168,13 @@ padding-top: 10%;
 
 
 
+}
+.serv{
+text-align: center;
+/* padding-left: 10%; */
+/* padding-right: 10%; */
+margin: 10%;
+border: solid ;
+align-content: space-around;
+border-radius: 20%;
 }
