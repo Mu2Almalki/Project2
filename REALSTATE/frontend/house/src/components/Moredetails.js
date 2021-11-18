@@ -24,8 +24,15 @@ function send() {
           <div>
             <br></br>
             <h3>{item.title}</h3>
-{/* _________________________________________________ */}
-{item.imgDetails.map((e)=>{
+
+{ function (){
+  if (item.imgDetalis.map > 0){
+
+  }
+  
+}}
+
+{/* {item.imgDetails.map((e)=>{
  
   return(
 <div className="divmore" >
@@ -64,7 +71,7 @@ function send() {
 </div>
   )
 
-})}
+})} */}
 
 {/* __________________________________________________ */}
 

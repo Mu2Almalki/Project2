@@ -53,17 +53,12 @@ function Serves() {
           return (
             <div>
               <h1>{House.title}</h1>
-              <img src={House.img}></img>
+              <img src={House.imge}></img>
               <h3>{House.Location}</h3>
               <p>{House.Details}</p>
               <h3>{House.price}</h3>
-              <button type="button" class="btn btn-secondary"
-                onClick={() => {
-                  handlDel(House.id);
-                }}
-              >
-                Delete
-              </button>
+              <button type="button" class="btn btn-secondary"onClick={() => {handlDel(House.id);}}>
+                Delete </button>
             </div>
           );
         } else {

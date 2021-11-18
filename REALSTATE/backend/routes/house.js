@@ -31,11 +31,11 @@ router.get('/details/:id', (req , res)=>{
 router.post('/post', function(req ,res ){
     const newhouse={
         id :uniqid(),
-        img:req.body.img,
+        imge:req.body.img,
         title:req.body.title,
-        location:req.body.location,
-        price:req.body.price,
-        detils:req.body.detils,
+        Location:req.body.Location,
+        Price:req.body.price,
+        Details:req.body.detils,
     }
     house.push(newhouse);
     fs.writeFile("house.json",JSON.stringify(house), function(err , data){
@@ -84,9 +84,9 @@ router.delete("/delete/:id", (req, res) => {
         id :found.id,
         img:req.body.img,
         title:req.body.title,
-        location:req.body.location,
+        location:req.body.Location,
         price:req.body.price,
-        detils:req.body.detils,
+        detils:req.body.Details,
       };
       let targetIndex = house.indexOf(found);
       house.splice(targetIndex, 1, update);

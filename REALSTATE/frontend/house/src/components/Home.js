@@ -42,7 +42,7 @@ function Home (){
         <Card.Body className="cardStyle">
           <Card.Title> {item.title}</Card.Title>
           <Card.Text>{item.Location}</Card.Text>
-          <Card.Text>{item.Price}</Card.Text>
+          <Card.Text>{item.Price} SAR</Card.Text>
           {/* <Card.Text>{item.Details}</Card.Text> */}
           <Link to={`/Details/${item.id}`} > <Button variant="secondary">More Details</Button></Link>
         </Card.Body>
