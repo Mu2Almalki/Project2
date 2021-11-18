@@ -57,7 +57,7 @@ function Serves() {
               <h3>{House.Location}</h3>
               <p>{House.Details}</p>
               <h3>{House.price}</h3>
-              <button
+              <button type="button" class="btn btn-secondary"
                 onClick={() => {
                   handlDel(House.id);
                 }}
