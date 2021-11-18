@@ -67,7 +67,7 @@ function Serves() {
             </div>
           );
         } else {
-          return <h3>you need to enter data</h3>;
+          return <h3> Enter Your Data</h3>;
         }
       })()}
       <div>
